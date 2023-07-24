@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>{{acao}} usuário</h1>
+<div mat-dialog-content>
+  <p>Nome</p>
+  <mat-form-field>
+    <mat-label>Nome</mat-label>
+    <input matInput [(ngModel)]="usuario.nome">
+  </mat-form-field>
+    <p>Email</p>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="usuario.email">
+  </mat-form-field>
+  <p>Senha</p>
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input matInput [(ngModel)]="usuario.senha">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="usuario" cdkFocusInitial>{{acao}}</button>
+</div>
